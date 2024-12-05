@@ -1,19 +1,16 @@
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
 import {
   InputOTP,
   InputOTPGroup,
-  InputOTPSeparator,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { sendEmailOTP, verifySecret } from "@/lib/actions/user.actions";
@@ -100,7 +97,7 @@ function OtpModal({ email, accountId }: { email: string; accountId: string }) {
             </AlertDialogAction>
 
             <div className="subtitle-2 mt-2 text-center text-light-100">
-              Didn't get a code?
+              Didn&apos;t get a code?
               <button
                 type="button"
                 variant={"link"}
