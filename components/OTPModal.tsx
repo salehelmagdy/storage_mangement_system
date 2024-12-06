@@ -32,7 +32,7 @@ function OtpModal({ email, accountId }: { email: string; accountId: string }) {
       //call API to verify OTP
       const sessionId = await verifySecret({ accountId, password });
 
-      console.log(sessionId);
+      // console.log(sessionId);
 
       if (sessionId) router.push("/");
     } catch (error) {
