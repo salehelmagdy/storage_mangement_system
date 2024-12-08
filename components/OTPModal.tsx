@@ -100,7 +100,6 @@ function OtpModal({ email, accountId }: { email: string; accountId: string }) {
               Didn&apos;t get a code?
               <button
                 type="button"
-                variant={"link"}
                 className="pl-1 text-brand"
                 onClick={handleResendOtp}
               >
