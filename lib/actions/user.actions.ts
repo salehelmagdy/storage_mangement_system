@@ -1,7 +1,7 @@
 "use server";
 
 import { createAdminClient, createSessionClient } from "../appwrite";
-import { appwriteConfig } from "../appwrite/cofig";
+import { appwriteConfig } from "../appwrite/config";
 import { ID, Query } from "node-appwrite";
 import { parseStringify } from "../utils";
 import { cookies } from "next/headers";
