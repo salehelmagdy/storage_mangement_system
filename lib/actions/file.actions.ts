@@ -2,7 +2,7 @@
 
 import { createAdminClient, createSessionClient } from "../appwrite";
 import { InputFile } from "node-appwrite/file";
-import { appwriteConfig } from "../appwrite/cofig";
+import { appwriteConfig } from "../appwrite/config";
 import { ID, Models, Query } from "node-appwrite";
 import { constructFileUrl, getFileType, parseStringify } from "../utils";
 import { revalidatePath } from "next/cache";
@@ -197,6 +197,7 @@ export async function getTotalSpaceUsed() {
   try {
     const { databases } = await createSessionClient();
     const currentUser = await getCurrentUser();
+    console.log({ currentUser });
     if (!currentUser) throw new Error("User is not authenticated.");
 
     const files = await databases.listDocuments(
